@@ -1,0 +1,14 @@
+.products {
+    display: flex;
+    flex: 1;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 30px;
+}
+
+.buyShirt, .buyShoe, .buyJacket, .buyHeadWarmer {
+    display: none;
+}

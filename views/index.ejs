@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online store</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/scripts/index.js"></script>
+</head>
+<body>
+    <%- include("../layouts/nav") %>
+    <div class="products">
+        <div class="card">
+            <h3>Shirt</h3>
+            <p>15</p>
+            <button class="showShirt">Buy now</button>
+            <form class="buyShirt" action="/" method="post">
+                <input type="hidden" name="name" value="Shirt">
+                <input type="hidden" name="amount" value="15"><br>
+                <input type="number" name="quantity" placeholder="Enter quantity" min="1" value="1"><br><br>
+                <button type="submit">Add to cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <h3>Shoe</h3>
+            <p>45</p>
+            <button class="showShoe">Buy now</button>
+            <form class="buyShoe" action="/" method="post">
+                <input type="hidden" name="name" value="shoe">
+                <input type="hidden" name="amount" value="45"><br>
+                <input type="number" name="quantity" placeholder="Enter quantity" min="1"><br><br>
+                <button type="submit">Add to cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <h3>Jacket</h3>
+            <p>22</p>
+            <button class="showJacket">Buy now</button>
+            <form class="buyJacket" action="/" method="post">
+                <input type="hidden" name="name" value="jacket">
+                <input type="hidden" name="amount" value="22"><br>
+                <input type="number" name="quantity" placeholder="Enter quantity" min="1"><br><br>
+                <button type="submit">Add to cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <h3>Head warmer</h3>
+            <p>10</p>
+            <button class="showHeadWarmer">Buy now</button>
+            <form class="buyHeadWarmer" action="/" method="post">
+                <input type="hidden" name="name" value="head-warmer">
+                <input type="hidden" name="amount" value="10"><br>
+                <input type="number" name="quantity" placeholder="Enter quantity" min="1"><br><br>
+                <button type="submit">Add to cart</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
