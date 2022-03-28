@@ -11,7 +11,74 @@
 </head>
 <body>
     <%- include("../layouts/nav") %>
-    <div class="products">
+    <!-- HEADER  -->
+    <header>
+        <section class="header-section">
+            <div class="intro-text">
+                <h1 class="header-text">Awesome Online Store</h1>
+                <p class="header-sub-text">Get the best of everything!</p>
+                <button class="header-button">Shop now</button>
+            </div>
+            <div class="intro-image">
+                <img class="shop-image" src="/images/online-shop-1.png" alt="shop-image">
+            </div>
+        </section>
+    </header>
+    <!-- PRODUCTS  -->
+    <main>
+        <h2 class="product-heading">Products</h2>
+        <div class="cards">
+            <div class="product">
+                <h3>Shirt</h3>
+                <img class="product-image" src="images/shirt.jpg" alt="shirt">
+                <p class="product-price">$15</p>
+                <button class="showShirt buy-now">Buy now</button>
+                <form class="buyShirt" action="/" method="post">
+                    <input type="hidden" name="name" value="Shirt">
+                    <input type="hidden" name="amount" value="15"><br>
+                    <input class="product-quantity" type="number" name="quantity" placeholder="Enter quantity" min="1" value="1"><br><br>
+                    <button class="add-to-cart" type="submit">Add to cart</button>
+                </form>
+            </div>
+            <div class="product">
+                <h3>Jacket</h3>
+                <img class="product-image" src="images/jacket.jpg" alt="jacket">
+                <p class="product-price">$22</p>
+                <button class="showJacket buy-now">Buy now</button>
+                <form class="buyJacket" action="/" method="post">
+                    <input type="hidden" name="name" value="jacket">
+                    <input type="hidden" name="amount" value="22"><br>
+                    <input type="number" name="quantity" placeholder="Enter quantity" min="1"><br><br>
+                    <button class="add-to-cart" type="submit">Add to cart</button>
+                </form>
+            </div>
+            <div class="product">
+                <h3>Shoe</h3>
+                <img class="product-image" src="images/shoe.jpg" alt="shoe">
+                <p class="product-price">$45</p>
+                <button class="showShoe buy-now">Buy now</button>
+                <form class="buyShoe" action="/" method="post">
+                    <input type="hidden" name="name" value="shoe">
+                    <input type="hidden" name="amount" value="45"><br>
+                    <input type="number" name="quantity" placeholder="Enter quantity" min="1"><br><br>
+                    <button class="add-to-cart" type="submit">Add to cart</button>
+                </form>
+            </div>
+            <div class="product">
+                <h3>Cap</h3>
+                <img class="product-image" src="images/cap.jpg" alt="cap">
+                <p class="product-price">$10</p>
+                <button class="showHeadWarmer buy-now">Buy now</button>
+                <form class="buyHeadWarmer" action="/" method="post">
+                    <input type="hidden" name="name" value="head-warmer">
+                    <input type="hidden" name="amount" value="10"><br>
+                    <input type="number" name="quantity" placeholder="Enter quantity" min="1"><br><br>
+                    <button class="add-to-cart" type="submit">Add to cart</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- <div class="products">
         <div class="card">
             <h3>Shirt</h3>
             <p>15</p>
@@ -56,6 +123,7 @@
                 <button type="submit">Add to cart</button>
             </form>
         </div>
-    </div>
+    </div> -->
+    <%- include("../layouts/footer") %>
 </body>
 </html>

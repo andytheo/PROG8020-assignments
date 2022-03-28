@@ -60,6 +60,10 @@ app.post("/", (req, res) => {
   res.send(productDetail);
 });
 
+app.get("/checkout", (req, res) => {
+  res.render("checkout")
+})
+
 const PORT = 3000 || 4000;
 app.listen(PORT, function () {
   console.log("Server started on port " + PORT);

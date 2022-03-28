@@ -1,4 +1,4 @@
-.products {
+/* .products {
     display: flex;
     flex: 1;
 }
@@ -7,8 +7,184 @@
     border: 1px solid black;
     padding: 20px;
     margin: 0 30px;
+} */
+
+body {
+    background-color: antiquewhite;
+    padding: 0; 
+    margin: 0; 
+}
+
+/* NAV */
+.nav-list {
+    background-color: white;
+    box-shadow: 0px 0px 10px;
+    margin: 0;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.brand {
+    margin-right: auto;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+
+.cart-button {
+    background-color: antiquewhite;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid black;
+    padding: 0.5rem;
+    display: grid;
+}
+
+.cart-button:hover {
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-total {
+    /* padding: 50px 0 0; */
+}
+
+/* HEADER  */
+.header-section {
+    display: flex;
+    flex: 1;
+}
+
+.intro-text {
+    flex: 1;
+    margin: 200px 120px;
+}
+
+.header-text {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+.header-sub-text {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.header-button {
+    background-color: white;
+    font-size: 1rem;
+    border: 1px solid black;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.header-button:hover {
+    cursor: pointer;
+}
+
+.intro-image {
+    flex: 1;
+    margin-top: 80px;
+    margin-left: 350px;
+}
+
+.shop-image {
+    width: 700px;
+}
+
+/* PRODUCTS  */
+
+.product-heading {
+    font-size: 2.4rem;
+    padding: 35px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin: 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.product{
+    display: flex;
+    flex-flow: column;
+    border:  2px solid ;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px black;
+}
+.product h3{
+    margin: 20px 0 0 0;
+}
+.buy-now, .add-to-cart {
+    margin-top: auto; 
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 21px;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 100%;
+}
+
+.buy-now:hover, .add-to-cart:hover {
+    cursor: pointer;
+}
+
+
+
+.product-image {
+    margin: 30px 0;
+}
+
+.product-price {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 5px;
+}
+
+.product-quantity {
+    text-align: center;
 }
 
 .buyShirt, .buyShoe, .buyJacket, .buyHeadWarmer {
     display: none;
+    text-align: center;
+}
+
+footer {
+    margin: 80px 0 0;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 990px) {
+    .intro-image {
+    display: none;
+    }
 }

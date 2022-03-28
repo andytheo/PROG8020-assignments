@@ -1,3 +1,16 @@
-<div>
-    <button>Cart <%= totalCartItems %></button>
-</div>
+<!-- <div>
+    <button>Cart <%#= totalCartItems %></button>
+</div> -->
+
+<nav>
+    <ul class="nav-list">
+        <a href="/" class="brand">OnlineStore</a>
+        <li class="nav-item"><a href="">Products</a></li>
+        <li class="nav-item"><a href="/checkout">Checkout</a></li>
+        <li class="nav-item">
+            <button class="cart-button">
+                <img class="cart-icon" src="/images/cart.png" alt="cart-icon"> <span class=""><%= totalCartItems %></span>
+            </button>
+        </li>
+    </ul>
+</nav>
