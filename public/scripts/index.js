@@ -18,9 +18,9 @@ $(document).ready(function()
             $('.showJacket').hide();
         });
 
-         $('.showHeadWarmer').click(function()
+         $('.showCap').click(function()
         {
-            $('.buyHeadWarmer').show();
-            $('.showHeadWarmer').hide();
+            $('.buyCap').show();
+            $('.showCap').hide();
         });
 });

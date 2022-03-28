@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online store</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/scripts/index.js"></script>
+</head>
+<body>
+    <h1 class="receipt-heading">Receipt</h1>
+    <main class="receipt-main">
+        <div class="receipt">
+            <div>
+                <p>Thank you for shopping with us.</p>
+                <hr class="receipt-line">
+                <% 
+                    if(typeof(userData.province) != 'undefined')
+                    {
+                %>
+                    <p>Name: <%= userData.name %></p>
+                    <p>Email: <%= userData.email %></p>
+                    <p>Phone: <%= userData.phone %></p>
+                    <p>Address: <%= userData.address %></p>
+                    <p>City: <%= userData.city %></p>
+                    <p>Province: <%= userData.province %></p>
+                <%
+                    }
+                %>
+                <hr class="receipt-line">
+                <p><strong>Products bought</strong></p>
+                 <%
+                    for (var purchase of allPurchase)
+                    {
+                %>
+                <p>Name: <%= purchase.name %> <br></p>
+                <p>Amount: $<%= purchase.amount.toFixed(2) %> <br></p>
+                <p>Quantity: <%= purchase.quantity %> <br></p>
+                <p>Total: $<%= purchase.total.toFixed(2) %> <br></p>
+                <hr class="receipt-line">
+                <%
+                    }
+                %>
+                <p>Subtotal: <%= subTotal.toFixed(2) %></p>
+                <p>Tax: </p>
+                <p>Grand Total: $<%= grandTotal.toFixed(2) %></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

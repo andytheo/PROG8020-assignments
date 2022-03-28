@@ -4,10 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online store</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/scripts/index.js"></script>
 </head>
 <body>
     <%- include("../layouts/nav") %>
-    <h1>Yo</h1>
+    
+    <h1 class="checkout-heading">Checkout</h1>
+    <form class="checkout-form" action="/checkout" method="post">
+        <input class="input-class" type="text" name="name" placeholder="Enter full name">
+        <input class="input-class" type="text" name="email" placeholder="Enter email">
+        <input class="input-class" type="text" name="phone" placeholder="Enter Phone">
+        <input class="input-class" type="text" name="address" placeholder="Enter address">
+        <input class="input-class" type="text" name="city" placeholder="Enter city">
+        <input class="input-class" type="text" name="province" placeholder="Enter province">
+        <button class="checkout-button" type="submit">Submit</button>
+    </form>
+
+    <% 
+      if (typeof(errors) != 'undefined')
+      {
+        for (let error of errors)
+        {
+    %>
+        <div class="error-section">
+          <p class="errors"> <%= error.msg %></p>
+        </div>
+    <%
+        }
+      }
+    %>
+
+    <% 
+      if(typeof(name) != 'undefined')
+      {
+    %>
+    <h1 class="receipt-heading">Receipt</h1>
+    <main class="receipt-main">
+        <div class="receipt">
+            <div>
+                <p>Thank you for shopping with us.</p>
+                <hr class="receipt-line">
+                
+                    <p>Name: <%= userData.name %></p>
+                    <p>Email: <%= userData.email %></p>
+                    <p>Phone: <%= userData.phone %></p>
+                    <p>Address: <%= userData.address %></p>
+                    <p>City: <%= userData.city %></p>
+                    <p>Province: <%= userData.province %></p>
+                
+                <hr class="receipt-line">
+                <p><strong>Products bought</strong></p>
+                 <%
+                    for (var purchase of allPurchase)
+                    {
+                %>
+                <p>Name: <%= purchase.name %> <br></p>
+                <p>Amount: $<%= purchase.amount.toFixed(2) %> <br></p>
+                <p>Quantity: <%= purchase.quantity %> <br></p>
+                <p>Total: $<%= purchase.total.toFixed(2) %> <br></p>
+                <hr class="receipt-line">
+                <%
+                    }
+                %>
+                <p>Subtotal: <%=  %></p>
+                <p>Tax: </p>
+                <p>Grand Total: $<%=  %></p>
+            </div>
+        </div>
+    </main>
+    <%
+      }
+    %>
 </body>
 </html>

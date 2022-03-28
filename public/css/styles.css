@@ -110,7 +110,6 @@ a {
 }
 
 /* PRODUCTS  */
-
 .product-heading {
     font-size: 2.4rem;
     padding: 35px;
@@ -153,8 +152,6 @@ a {
     cursor: pointer;
 }
 
-
-
 .product-image {
     margin: 30px 0;
 }
@@ -169,9 +166,73 @@ a {
     text-align: center;
 }
 
-.buyShirt, .buyShoe, .buyJacket, .buyHeadWarmer {
+.buyShirt, .buyShoe, .buyJacket, .buyCap {
     display: none;
     text-align: center;
+}
+
+/* CHECKOUT */
+.main-checkout-page {
+    display: flex;
+    flex: 1;
+}
+
+.checkout-heading {
+    font-size: 2.4rem;
+    padding: 35px;
+    text-align: center;
+}
+
+.checkout-form {
+    align-items: right;
+}
+
+.input-class {
+    width: 350px;
+    height: 25px;
+    display: block;
+    margin: 0 20px 20px;
+}
+
+.checkout-button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 21px;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 360px;
+}
+
+.checkout-button:hover {
+    cursor: pointer;
+}
+
+.error-section {
+    text-align: center;
+    color: red;
+}
+
+/* RECEIPT  */
+.receipt-main {
+    
+}
+
+.receipt-heading {
+    margin-left: auto;
+}
+
+.receipt {
+    width: 350px;
+    background-color: white;
+    /* margin: 0 auto; */
+    text-align: left;
+    padding: 20px;
+}
+
+.receipt-line {
+    border: 1px dashed black;
 }
 
 footer {
